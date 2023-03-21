@@ -27,7 +27,7 @@ from flask_cors import CORS
 # Get the host where Elasticsearch is running, default to localhost
 
 
-doc_dir = r"zui"
+doc_dir = r"final\zui"
 all_docs = convert_files_to_docs(dir_path=doc_dir,encoding="utf-8")
 preprocessor = PreProcessor(
     clean_empty_lines=True,
