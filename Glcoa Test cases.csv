@@ -1,0 +1,194 @@
+,Project / Product,GLCOA,,Passed,,,,,
+,Version / Release,1,,Failed,,,,,
+,Test Engineer,Kiran Kumar Reddy C,,Blocked,,,,,
+,Date,,,Not Executed,,,,,
+,,,,,,,,,
+,Test Case Set,Source Template Workbench,,,,,,,
+,Overview,,,,,,,,
+,Configuration,,,,,,,,
+,,,,,,,,,
+TEST CASE,,,,,,TEST SCRIPT,,,
+S.no,Test Case ID,Test Case Name,Test Data,Test Steps,Expected Result,Actual Result,Status (Pass/Fail),Test Case Type (Positive/Negative),Comments
+1,TC -001,Test whether user able to create new Connection by logging in with correct credentials ,"1. Url                      :   ""   https://ritecoa.ritesoftware.com  ""
+2. Username       :   "" Username  ""
+3. Password        :    "" Passw**** ""
+4. Name              : ""Something Unique""                                                         5. Identifier        :  ""Something Unique""                                                              6. Keywords       :  ""Something Unique""
+7. Role               :  "" trigger and invoke ""
+8. Description    : "" any description about connection ""
+9.  Cloud Url        :   ""  https://fa-etao-dev20-saasfademo1.ds-fa.oraclepdemos.com""
+10. Cloud Username : "" caseybrown ""
+11. Cloud password :  "" pas**** ""","                                                  * MANDATE*
+**{For giving  any name for any thing naming convention should be followed! } **
+1.{ (a).  Open browser
+      (b).  Enter Url
+      (c).  Enter username and password and click login }
+2. Click on settings and select connections
+3. Click on create option
+4. Click on "" Select adapter "" dropdown
+5. Select "" Oracle ERP Cloud "" option and click on ""  select  ""
+6. Enter Data in these mandatory fields { name, identifier, keywords, role } and click on "" select ""
+7. Enter cloud host details  in "" ERP Cloud Host "" 
+8. Click on "" security policy "" dropdown  and  Select "" Username Password Token ""
+9. Enter cloud username and password
+10. Click on "" Test "" 
+11. Click on "" save ""
+12. Go back to connection screen and verify whether the connection is created or not ?","1. Browser opened , given url redirected to login page , username and password field accepted the  given data as input and login button responded to click and by valid username and password it redirected user to homepage .
+2. When we click on settings It should display connections, settings, Ess status options .
+3. By selecting connections as a response it should redirect the user to connections screen which displays  already existing connections .
+4. As a response to click on "" Create "" it should redirect the user to  connections screen with ""  Select adapter "" dropdown .
+5. By selecting the required value from dropdown and clicking on "" select "" it should redirect the user to next screen ""create connections""  according to the selected value it should display the screens .
+6. In create connections screen enter data in all mandatory fields (optional in description) , every field should accept the given data as input and  click on create it will redirect to "" Save connection "" screen .
+7. "" Erp cloud host "" field will accept given host data and dropdown will display "" Username password Token "" value by clicking on it should select the value and will display username and password field.
+8. Username and password fields should accept given input and by clicking on "" Test "" it will verify whether the given connection credentials are valid or not and upon entering correct values it will display connection succesfull/pass 
+and if any of the credentials were wrong then it should fail the connection.
+9. After testing the connection clicking on "" save "" should save the connection details and saved connection should reflect back in connections  screen which displays all existing screens .",,,,
+2,TC -002,"Test whether user is able to view/edit Existing connections
+ in connections screen",Take same test data from TC-001 with adding " 1 " as attribute,"1. Follow from step 1 to 2
+2. In connections screen click on edit/view button of any available connection
+3. Again follow the same steps from ""  TC-001 ""  @ 6 to 11 with different data
+4. Again go back to connection screen and  verify if  changed details  were updated or not.","1. Browser opened , given url redirected to login page , username and password field accepted the  given data as input and login button responded to click and by valid username and password it redirected user to homepage .
+2. When we click on settings it should display connections, settings, Ess status options .
+3. By selecting connections as a response it should redirect the user to connections screen which displays already existing connections
+4. Modify button will enable the user to modify / update any data  needed to change in a existing connection
+4. All modified data should be saved and updated ",,,,
+3,TC -003,Test whether user is able to load target coa in settings ,"Take login details from TC -001
+","1. Follow from step  1 
+2. Click on ""  Settings ""  and Select settings 
+3. Click on Connection dropdown and select Connection  as "" Oracle ERP Cloud "" 
+4. Click on "" Target COA "" dropdown and select target coa 
+5. Click on "" load """,,,,,
+4,TC -004,Test whether user is able to  Choose " other Erp "  in settings ,"Take login details from TC -001
+","1. Follow from step  1 
+2. Click on ""  Settings ""  and Select settings 
+3. Enable "" Other "" radio button 
+",,,,,
+5,TC -005,Test whether user able access " Ess Status ","Take login details from TC -001
+","1. Follow from step  1 
+2. Click on ""  Settings ""  and Select "" ESS Settings "".
+
+",,,,,
+6,TC -006,"Check whether user able to access "" COA Connections ""  and  able to select "" Source Connection "" and "" Target Connection "" values from dropdown's
+","Take login details from TC -001
+","1. Follow from step  1 
+2. Click on ""  Structure Workbench"" from menu   and Select "" COA Connections "".
+3. Click on "" Source Connections "" dropdown
+4. Select a Source connection value as "" OCI-EBS ""
+5. Click on "" Target Connections "" dropdown
+6. Select a target connection value as "" OCI-ERP-CLOUD ""
+7. Click on "" Select "" button.
+
+",,,,,
+7,TC -007,"Check whether if user able to create new "" Source COA ""
+","Take login details from TC -001
+","1. Follow from step  1 from TC -001, and Follow Steps 2 to 7 from TC -006 
+2. Click on  "" Other ERP "" radio button
+3. Click on "" Create New "" button
+4. Enter "" Source Coa Name "" 
+5. Enter any "" Description ""(Optional)
+6. Enter "" Delimiter "" (.)( may vary for case to case confirm before going forward)
+7. Click on "" + "" (Add) button 
+8. Enter Source Column name in  "" Name "" column
+9. Click on "" Data type "" dropdown and  Select value as ""   ""
+10. Enter "" Width "" as mentioned in test data
+11. After completing adding segment values by above steps click "" Save "" button
+
+",,,,,
+8,TC -008,"1.Check whether user able to load ledger data in "" Source COA "" screen
+2. Check if user able to see existing  ledger data in "" Source COA "" screen
+
+","Take login details from TC -001
+","1. Follow from step  1 from TC -001, and Follow Steps 2 to 7 from TC -006 
+2. Click on "" Ledger "" dropdown and Select value as "" ""
+3. Click on "" Load "" button 
+4. Click on "" Clear "" to reset the screen",,,,,
+9,TC -009,Check whether if user able to view  already existing " Ledger " details from " source coa ","Take login details from TC -001
+","1. Follow  step 1 from above test case TC -008
+2. Select ledger  and click on its ""  edit  ""  button ",,,,,
+10,TC -010,Check whether  if user able to delete already existing " ledger " from " Source coa ","Take login details from TC -001
+","1. Follow  step 1 from above test case TC -008
+2. Select ledger  and click on its ""  Delete  ""  button ",,,,,
+11,TC -011,"Check whether if user able to create new "" Target COA ""
+","Take login details from TC -001
+","1. Follow step 1 to 7 from TC -006
+2. Click on "" Structure Workbench "" from menu and Select "" Target COA ""
+3. Click on "" Other Erp "" radio button
+4. Click on "" Create New "" 
+5. Give a unique name in "" Target COA Name "" 
+6. Enter any "" Description ""(Optional)
+7. Enter "" Delimiter "" (.)( may vary for case to case confirm before going forward)
+8. Click on "" + "" (Add) button 
+9. Enter target Column name's in  "" Name "" column
+10. Click on "" Data type "" dropdown and  Select value as ""   ""
+11. Enter "" Width "" as mentioned in test data
+12. After completing adding segment values by above steps click "" Save "" button",,,,,
+12,TC -012,"1.Check whether user able to load ledger data in "" Target COA "" screen
+2. Check if user able to see existing  ledger data in "" Target COA "" screen
+","Take login details from TC -001
+","1. Follow from step  1 from TC -001, and Follow Steps 2 to 7 from TC -006 
+2. Click on "" Structure Workbench "" from menu and Select "" Target COA ""
+2. Click on "" Ledger "" dropdown and Select value as "" ""
+3. Click on "" Load "" button 
+4. Click on "" Clear "" to reset the screen",,,,,
+13,TC -013,Check whether if user able to view  already existing " Ledger " details from " Target coa ","Take login details from TC -001
+","1. Follow  step 1 from above test case TC -008
+2. Select ledger  and click on its ""  edit  ""  button ",,,,,
+14,TC -014,Check whether  if user able to delete already existing " ledger " from " Target coa ","Take login details from TC -001
+","1. Follow  step 1 from above test case TC -008
+2. Select ledger  and click on its ""  Delete  ""  button ",,,,,
+15,TC -015,Check If user able to access mappings screen and able to see existing mappings ,"Take login details from TC -001
+","1. Follow step 1 to 7 from TC -006
+2. Click on "" Mapping "" from menu 
+
+",,,,,
+16,TC -016,Check if user able to create new mapping,"Take login details from TC -001
+","1. Follow step 1 to 7 from TC -006
+2. Click on "" Mapping "" from menu 
+3. Click on "" + NEW  "" button to create  new mapping 
+4. Give a name to mapping in "" Mapping Name "" field
+5. Select ""  Source Ledger "" as "" ""
+6. Select ""  Target Ledger "" as "" ""
+7. Enter any  description in  "" Description "" field
+8. Click on "" + "" button  to add new mapping row 
+9. Under "" Source Information ""   Click on "" 1st Segment "" dropdown and select source value as "" "" and similarly according to type of mapping give values in other segments 
+10. Under "" Mappings "" click on "" Mapping Logic  "" dropdown and select mapping type as "" "" 
+11. If mapping type is  "" Constant & "" then provide value in ""  Mapping values "" field below "" Mappings ""
+12. Under "" Target Information "" click on "" 1st Segment "" dropdown and select target value to be mapped with source segment 1, similarly based  source and target columns to be mapped select ""Mapping Logic "" 
+13. click on "" Save "" button
+14. Now click on Download button below "" Mapping Value Template ""   
+15. Enter related segment values in that csv file 
+16. Click on  "" upload "" button and  and upload data entered csv file 
+17. Click on "" Save "" button
+
+",,,,,
+17,TC -017,Check if user able to " Delete " mapping row while in creating a new mapping,"Take login details from TC -001
+","1. Follow from step 1 to 17 from TC -016
+2.  Click on "" Delete "" button  of row which you want to delete 
+3. Click on "" save "" ",,,,,
+18,TC -018,"Check if user is able to view and modify already existing/created mapping 
+","Take login details from TC -001
+","1. From TC -015 follow step 1 to 2
+2. Click on "" Edit "" button
+3. Modify any changes you want by following same steps from TC - 016
+4. Click on "" Update ""  button before leaving page and  after making any modifications to save changes 
+",,,,,
+19,TC -019,"Check whether if user able to perform "" Pre - Validation "" on created mapping  by Automatic way 
+","Take login details from TC -001
+create valid mapping get details and data use it
+","1. Follow step 1 to 17 from TC -016
+2. Click on "" Conversion workbench "" from menu 
+3. Select "" Pre - Validation "" option 
+4. Click on "" Mapping Name "" dropdown and select the mapping to which you want to do pre - validation
+5. Enter unique identifying name in  "" Batch Name "" field  ex:- WoodGl_T
+6. Select the "" Source Period "" of which the mapping/ ledger belongs to can get it from functional people 
+7. Click on "" Auto "" radio button and enable it 
+8. Click on "" Load CCID ( Auto ) "" button 
+9.
+10.",Still to complete ,,,,
+20,TC -020,"Check whether if user able to perform "" Pre - Validation "" on created mapping  by Manual  way 
+","Take login details from TC -001
+create valid mapping get details and data use it
+","1. From "" TC -019 "" follow step 1 to 6
+2. Click on "" Manual "" radio button and enable it 
+3. 
+",Still to complete ,,,,
+21,TC -021,,,,,,,,

@@ -1,0 +1,27 @@
+Test whether user able to create new Connection by logging in with correct credentials :
+"                                                  * MANDATE*
+**{For giving  any name for any thing naming convention should be followed! } **
+1.{ (a).  Open browser
+      (b).  Enter Url
+      (c).  Enter username and password and click login }
+2. Click on settings and select connections
+3. Click on create option
+4. Click on "" Select adapter "" dropdown
+5. Select "" Oracle ERP Cloud "" option and click on ""  select  ""
+6. Enter Data in these mandatory fields { name, identifier, keywords, role } and click on "" select ""
+7. Enter cloud host details  in "" ERP Cloud Host "" 
+8. Click on "" security policy "" dropdown  and  Select "" Username Password Token ""
+9. Enter cloud username and password
+10. Click on "" Test "" 
+11. Click on "" save ""
+12. Go back to connection screen and verify whether the connection is created or not ?"
+
+
+
+"Test whether user is able to view/edit Existing connections
+ in connections screen"
+"1. Follow from step 1 to 2
+2. In connections screen click on edit/view button of any available connection
+3. Again follow the same steps from ""  TC-001 ""  @ 6 to 11 with different data
+4. Again go back to connection screen and  verify if  changed details  were updated or not."
+
